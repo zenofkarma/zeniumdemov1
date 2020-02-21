@@ -1,0 +1,50 @@
+title:              Test site
+email:              your-email@example.com
+description:        Test site
+author:             Test site
+baseurl:            ""
+url:                ""
+include:            ["_pages"]
+permalink:          /posts/:title/
+
+# Social Profiles
+twitter_username:   Testsite
+github_username:    Testsite
+facebook_username:  Testsite
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           6
+
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+
+incremental: false
+safe: true #disable cache
+
+exclude:
+- README.md
+- .jekyll-cache/
+- Gemfile
+- Gemfile.lock
